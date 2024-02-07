@@ -27,7 +27,7 @@ const Hero = () => {
             <p className="hero-intro-p">
               A Software Engineer with keen interests in
             </p>
-            <section class="hero-intro-animation">
+            <section className="hero-intro-animation">
               {skillsArray.map((value, index) => {
                 return (
                   <div key={index} className={`animation-${index}`}>

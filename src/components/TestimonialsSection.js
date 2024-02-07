@@ -4,7 +4,7 @@ import carScanLogo from "../public/carscan_ai.jpeg";
 import rocketMlLogo from "../public/rocketml_logo.jpeg";
 import skilzenLogo from "../public/skilzen_logo.jpeg";
 
-export default Testimonials = () => {
+export default TestimonialsSection = () => {
   const testimonials = [
     {
       companyName: "Skilzen",
@@ -47,7 +47,10 @@ export default Testimonials = () => {
       <div className="flex flex-row max-w-[1024px] gap-4 flex-wrap justify-center h-">
         {testimonials.map((testimonial, index) => {
           return (
-            <Card appliedClassName="w-96 h-60 p-4 flex flex-row gap-4">
+            <Card
+              appliedClassName="w-96 h-60 p-4 flex flex-row gap-4"
+              key={`${testimonial.companyName}`}
+            >
               <div className="flex flex-col h-full justify-between">
                 <div className="m-1 flex flex-col items-center">
                   <img

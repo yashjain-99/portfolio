@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cashrole";
+  src: url("../src/public/fonts/Cashrole.ttf");
+}
+
+.hero-intro-p {
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.3),
+    0 0 3px rgba(255, 255, 255, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.hero-intro-animation {
+  height: 2.81rem;
+  overflow: hidden;
+}
+
+nav {
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  background: none 0% 0% / auto repeat scroll padding-box border-box rgba(15, 15, 15, 0.92);
+}
+.hero-intro-animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height: 2.81rem;
+  margin-bottom: 2.81rem;
+  display: inline-block;
+}
+
+.nav-hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 350px;
+  z-index: 1;
+}
+
+.background {
+  background-color: #1A1A1A;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+.hero-intro-animation > div {
+  animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-5.62rem);
+  }
+  30% {
+    transform: translateY(-5.62rem);
+  }
+  40% {
+    transform: translateY(-5.62rem);
+  }
+  50% {
+    transform: translateY(-11.24rem);
+  }
+  60% {
+    transform: translateY(-11.24rem);
+  }
+  70% {
+    transform: translateY(-11.24rem);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

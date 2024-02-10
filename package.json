@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "build":"tailwindcss -i ./input.css -o ./dist/output.css && parcel build index.html",
+    "build": "tailwindcss -i ./input.css -o ./dist/output.css && parcel build index.html",
     "tailwind": "tailwindcss -i ./input.css -o ./dist/output.css",
     "tailwind-watch": "tailwindcss -i ./input.css -o ./dist/output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clsx": "^2.1.0",
     "parcel": "^2.10.1",
     "process": "^0.11.10",
     "tailwindcss": "^3.3.5"
@@ -21,6 +22,7 @@
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-card-flip": "^1.2.2",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.7.0"
   }
 }

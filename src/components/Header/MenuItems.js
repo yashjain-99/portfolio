@@ -29,7 +29,8 @@ const menuItems = [
 ];
 
 export const MenuItems = () => {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <>
       {menuItems.map((menuItem) => (
@@ -44,6 +45,7 @@ export const MenuItems = () => {
             href={`#${menuItem.item}`}
             onClick={() => {
               setActiveSection(menuItem.item);
+              setTimeOfLastClick(Date.now());
             }}
           >
             {menuItem.item}

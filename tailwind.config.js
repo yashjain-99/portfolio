@@ -9,6 +9,8 @@ module.exports = {
         "primary-border-color": "#292929",
         "primary-heading-color": "#525252",
         "primary-icon-selected-color": "#772AF4",
+        "logo-stroke": "#525252",
+        "logo-stroke-active": "white",
       },
       fontFamily: {
         cashrole: ["Cashrole", "sans-serif"],

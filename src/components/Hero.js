@@ -1,8 +1,10 @@
+import { useSectionInView } from "../hooks/useSectionInView";
 import { GithubLogo, InstagramLogo, LinkedInLogo, TwitterLogo } from "./Assets";
 import Card from "./Card";
 import ConnectButton from "./ConnectButton";
 
 const Hero = () => {
+  const { ref } = useSectionInView("home");
   const skillsArray = [
     { skill: "Full-stack development", bgColor: "bg-[#20a7d8]" },
     { skill: "Natural Language Processing", bgColor: "bg-[#cd921e]" },
@@ -11,8 +13,9 @@ const Hero = () => {
 
   return (
     <div
-      className="grid grid-rows-2 gap-2 p-3 m-3 md:h-80 md:max-w-[1024px] md:grid-cols-3 md:grid-rows-none md:gap-8 md:mt-10"
+      className="grid grid-rows-2 gap-2 p-3 m-3 md:h-80 md:max-w-[1024px] md:grid-cols-3 md:grid-rows-none md:gap-8 md:mt-10 scroll-mt-20"
       id="home"
+      ref={ref}
     >
       <Card appliedClassName="flex flex-col p-3 md:col-span-2 md:flex-row md:items-center">
         <div className="min-h-max max-w-max border-white rounded-full m-3 md:m-5 md:min-w-max border">

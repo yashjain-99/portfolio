@@ -1,8 +1,11 @@
 import { TestimonialsLogo } from "./Assets";
 import Card from "./Card";
-import carScanLogo from "../public/carscan_ai.jpeg";
-import rocketMlLogo from "../public/rocketml_logo.jpeg";
-import skilzenLogo from "../public/skilzen_logo.jpeg";
+import carScanLogo from "../public/carscan_ai.png";
+import rocketMlLogo from "../public/rocketml_logo.png";
+import skilzenLogo from "../public/skilzen_logo.png";
+import { useSectionInView } from "../hooks/useSectionInView";
+import clsx from "clsx";
+import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 
 export default TestimonialsSection = () => {
   const testimonials = [
@@ -32,16 +35,26 @@ export default TestimonialsSection = () => {
     },
   ];
 
+  const { ref } = useSectionInView("testimonials", 0.6);
+  const { activeSection } = useActiveSectionContext();
+
   return (
     <div
       className="flex flex-col justify-center items-center mb-4 gap-4"
       id="testimonials"
+      ref={ref}
     >
       <div
         name="TestimonialsSectionTitle"
         className=" h-fit flex flex-col items-center gap-4"
       >
-        <div>{TestimonialsLogo}</div>
+        <div
+          className={clsx("stroke-logo-stroke", {
+            " stroke-logo-stroke-active": activeSection === "testimonials",
+          })}
+        >
+          {TestimonialsLogo}
+        </div>
         <span>Testimonials Section</span>
       </div>
       <div className="flex flex-row max-w-[1024px] gap-4 flex-wrap justify-center h-">

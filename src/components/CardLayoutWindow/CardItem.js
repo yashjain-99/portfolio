@@ -44,7 +44,11 @@ const CardItem = ({
           transition={{ duration: 0.4 }}
           className="h-full"
         >
-          <Card appliedClassName="h-full w-full overflow-hidden flex flex-row">
+          <Card
+            appliedClassName={`h-full w-full overflow-hidden flex ${
+              dataItem.ss ? "flex-row" : "flex-col"
+            }`}
+          >
             <div className="pt-4 pb-7 px-5 sm:pt-10 sm:min-w-[50%] flex flex-col h-full">
               <h3 className="text-2xl font-semibold">{dataItem.heading}</h3>
               {dataItem.subHeading && (
@@ -96,38 +100,18 @@ const CardItem = ({
                     );
                   })}
               </ul>
-              {!dataItem.ss && (
-                <div className="flex ml-1 gap-2 mt-2">
-                  {dataItem.web && (
-                    <a
-                      href={dataItem.web}
-                      target="_blank"
-                      className="w-7 h-7 fill-white hover:fill-primary-icon-selected-color"
-                    >
-                      {WebLogo}
-                    </a>
-                  )}
-                  {dataItem.github && (
-                    <a
-                      href={dataItem.github}
-                      target="_blank"
-                      className="w-7 h-7 fill-white hover:fill-primary-icon-selected-color"
-                    >
-                      {GithubLogoProject}
-                    </a>
-                  )}
-                </div>
-              )}
             </div>
-            {dataItem.ss && (
-              <div className="flex flex-col justify-between lg:my-4 lg:rounded-l-2xl lg:overflow-hidden lg:min-w-[50%]">
-                <div className="hidden lg:block max-h-[90%] max-w-0">
-                  <img
-                    src={dataItem.ss}
-                    className=" max-w-none h-full object-cover max-h-96"
-                    alt={`Screenshot of ${dataItem.heading}`}
-                  />
-                </div>
+            {(dataItem.ss || dataItem.github || dataItem.web) && (
+              <div className="flex flex-col justify-between lg:my-4 lg:rounded-l-2xl lg:overflow-hidden lg:min-w-[50%] min-h-[2rem]">
+                {dataItem.ss && (
+                  <div className="hidden lg:block max-h-[90%] max-w-0">
+                    <img
+                      src={dataItem.ss}
+                      className="max-w-none h-full object-cover max-h-96"
+                      alt={`Screenshot of ${dataItem.heading}`}
+                    />
+                  </div>
+                )}
                 <div className="flex flex-row-reverse mr-1 gap-2">
                   {dataItem.web && (
                     <a

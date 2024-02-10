@@ -2,6 +2,9 @@ import { PortfolioSectonLogo } from "./Assets";
 import CardLayoutWindow from "./CardLayoutWindow";
 import chatSurakshaSS from "../public/chat-suraksha-ss.png";
 import kangarooTypeSS from "../public/kangaroo-type-ss.png";
+import { useSectionInView } from "../hooks/useSectionInView";
+import clsx from "clsx";
+import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 
 const Projects = () => {
   const projects = {
@@ -67,16 +70,25 @@ const Projects = () => {
     },
   ];
 
+  const { ref } = useSectionInView("works", 0.5);
+  const { activeSection } = useActiveSectionContext();
   return (
     <div
-      className="flex flex-col justify-center items-center p-3 m-3"
+      className="flex flex-col justify-center items-center p-3 m-3 scroll-mt-12"
       id="works"
+      ref={ref}
     >
       <div
         name="PortfolioSectionTitle"
         className=" h-fit flex flex-col items-center gap-4"
       >
-        <div>{PortfolioSectonLogo}</div>
+        <div
+          className={clsx("stroke-logo-stroke", {
+            " stroke-logo-stroke-active": activeSection === "works",
+          })}
+        >
+          {PortfolioSectonLogo}
+        </div>
         <span>Portfolio Section</span>
       </div>
       <CardLayoutWindow

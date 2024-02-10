@@ -1,6 +1,9 @@
 import { BackgroundSectionLogo } from "./Assets";
 import CardLayoutWindow from "./CardLayoutWindow";
 import { ExtraLogo, CareerLogo, EducationLogo } from "./Assets";
+import { useSectionInView } from "../hooks/useSectionInView";
+import clsx from "clsx";
+import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 
 const BackgroundSection = () => {
   const education_career = {
@@ -73,13 +76,26 @@ const BackgroundSection = () => {
     },
   ];
 
+  const { ref } = useSectionInView("CV");
+  const { activeSection } = useActiveSectionContext();
+
   return (
-    <div className="flex flex-col justify-center items-center p-3 m-3" id="CV">
+    <div
+      className="flex flex-col justify-center items-center p-3 m-3"
+      id="CV"
+      ref={ref}
+    >
       <div
         name="PortfolioSectionTitle"
         className=" h-fit flex flex-col items-center gap-4"
       >
-        <div>{BackgroundSectionLogo}</div>
+        <div
+          className={clsx("stroke-logo-stroke", {
+            " stroke-logo-stroke-active": activeSection === "CV",
+          })}
+        >
+          {BackgroundSectionLogo}
+        </div>
         <span>Background Section</span>
       </div>
       <CardLayoutWindow

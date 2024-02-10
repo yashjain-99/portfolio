@@ -7,7 +7,7 @@ import { useSectionInView } from "../hooks/useSectionInView";
 import clsx from "clsx";
 import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 
-export default TestimonialsSection = () => {
+const TestimonialsSection = () => {
   const testimonials = [
     {
       companyName: "Skilzen",
@@ -86,3 +86,5 @@ export default TestimonialsSection = () => {
     </div>
   );
 };
+
+export default TestimonialsSection;

@@ -1,9 +1,9 @@
-import AboutMe from "./AboutMe";
+import AboutMe from "./about-me";
 import Header from "./Header/index";
-import Hero from "./Hero";
-import Projects from "./Projects";
-import TestimonialsSection from "./TestimonialsSection";
-import BackgroundSection from "./Background";
+import Hero from "./hero";
+import Projects from "./projects";
+import TestimonialsSection from "./testimonials-section";
+import BackgroundSection from "./background";
 
 const AppLayout = () => {
   return (

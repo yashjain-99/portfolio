@@ -1,7 +1,12 @@
-import { useSectionInView } from "../hooks/useSectionInView";
-import { GithubLogo, InstagramLogo, LinkedInLogo, TwitterLogo } from "./Assets";
-import Card from "./Card";
-import ConnectButton from "./ConnectButton";
+import { useSectionInView } from "../hooks/use-section-in-view";
+import {
+  GithubLogo,
+  InstagramLogo,
+  LinkedInLogo,
+  TwitterLogo,
+} from "../utils/logos";
+import Card from "./card";
+import ConnectButton from "./connect-button";
 
 const Hero = () => {
   const { ref } = useSectionInView("home");

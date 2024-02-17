@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import ConnectButton from "../ConnectButton";
+import ConnectButton from "../connect-button";
 import { useActiveSectionContext } from "../../contexts/ActiveSectionContext";
 
 const variants = {
@@ -28,7 +28,7 @@ const menuItems = [
   { item: "CV", borderB: "bg-[#4400FF]" },
 ];
 
-export const MenuItems = () => {
+const MenuItems = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   return (
@@ -69,3 +69,5 @@ export const MenuItems = () => {
     </>
   );
 };
+
+export default MenuItems;

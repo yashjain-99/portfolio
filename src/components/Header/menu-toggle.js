@@ -11,7 +11,7 @@ const Path = (props) => (
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
+const MenuToggle = ({ toggle }) => (
   <button
     onClick={toggle}
     className=" cursor-pointer border-none rounded-[50%] outline-none w-12 h-12 absolute top-4 right-3"
@@ -40,3 +40,5 @@ export const MenuToggle = ({ toggle }) => (
     </svg>
   </button>
 );
+
+export default MenuToggle;

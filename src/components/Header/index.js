@@ -1,8 +1,9 @@
 import { useRef } from "react";
-import { motion, sync, useCycle } from "framer-motion";
-import { useDimensions } from "./use-dimensions";
-import { MenuToggle } from "./MenuToggle";
-import { Navigation } from "./Navigation";
+import { motion, useCycle } from "framer-motion";
+
+import MenuToggle from "./menu-toggle";
+import Navigation from "./navigation";
+import { useDimensions } from "../../hooks/use-dimensions";
 import { useMobileContext } from "../../contexts/MobileViewContext";
 
 const sidebar = {

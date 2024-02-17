@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import AppLayout from "./components/AppLayout";
+import AppLayout from "./components/app-layout";
 import { MobileProvider } from "./contexts/MobileViewContext";
 import ActiveSectionContextProvider from "./contexts/ActiveSectionContext";
 

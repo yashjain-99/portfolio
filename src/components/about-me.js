@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
-import { useSectionInView } from "../hooks/useSectionInView";
-import { AboutMeLogo } from "./Assets";
+import { useSectionInView } from "../hooks/use-section-in-view";
+import { AboutMeLogo } from "../utils/logos";
 
 const AboutMe = () => {
   const { ref } = useSectionInView("about");

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CardItem from "./CardItem";
-import Tabs from "./Tabs";
+import CardItem from "./card-item";
+import Tabs from "./tabs";
 
 const CardLayoutWindow = ({
   columns,

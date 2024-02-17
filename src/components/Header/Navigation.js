@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MenuItems } from "./MenuItems";
+import MenuItems from "./menu-items";
 
 const variants = {
   open: {
@@ -12,7 +12,7 @@ const variants = {
     display: "none",
   },
 };
-export const Navigation = () => (
+const Navigation = () => (
   <motion.ul
     variants={variants}
     className="min-w-full p-6 flex flex-col justify-center md:flex-row md:gap-12 md:items-center "
@@ -20,3 +20,5 @@ export const Navigation = () => (
     <MenuItems />
   </motion.ul>
 );
+
+export default Navigation;

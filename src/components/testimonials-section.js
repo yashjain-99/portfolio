@@ -1,40 +1,11 @@
-import { TestimonialsLogo } from "./Assets";
-import Card from "./Card";
-import carScanLogo from "../public/carscan_ai.png";
-import rocketMlLogo from "../public/rocketml_logo.png";
-import skilzenLogo from "../public/skilzen_logo.png";
-import { useSectionInView } from "../hooks/useSectionInView";
+import { TestimonialsLogo } from "../utils/logos";
+import Card from "./card";
+import { useSectionInView } from "../hooks/use-section-in-view";
 import clsx from "clsx";
 import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
+import { testimonials } from "../utils/constants";
 
 const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      companyName: "Skilzen",
-      testimonial:
-        "Yash Jain was a standout as a Data Engineer intern at Skilzen. His determination and sincerity shone through in every task. He's not just a hard worker; Yash is motivated and innovative, making a significant impact on our goals.",
-      testimonialBy: " Talluri Pavanteja",
-      lor: "https://drive.google.com/file/d/1BY0NkDheNHErvA1P13YXRmtktJQtNp94/view?usp=sharing",
-      logo: skilzenLogo,
-    },
-    {
-      companyName: "RocketML",
-      testimonial:
-        "Throughout his tenure, Yash demonstrated a strong grasp of professional skills, successfully tackling all assigned tasks. His hardworking and dedicated nature contributed significantly to the team. It was a pleasure to have Yash on board during his time with RocketML.",
-      testimonialBy: "Vinay Rao",
-      lor: "https://drive.google.com/file/d/1Y0GplQI7jRrMVljeRKWw9bO8wfj_fCYd/view?usp=sharing",
-      logo: rocketMlLogo,
-    },
-    {
-      companyName: "CarScan",
-      testimonial:
-        "Yash worked with our AI Team in India, showcasing professionalism and completing all tasks with dedication. His hardworking and committed approach made him a pleasure to have on board during this short period",
-      testimonialBy: "Obins Choudhary",
-      lor: "https://drive.google.com/file/d/1Irf_z189bbCOnrVPIjHL1JWinmAe_A_2/view?usp=sharing",
-      logo: carScanLogo,
-    },
-  ];
-
   const { ref } = useSectionInView("testimonials", 0.6);
   const { activeSection } = useActiveSectionContext();
 

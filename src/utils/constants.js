@@ -1,7 +1,7 @@
 import * as logo from "./logos";
-import skilzenLogo from "../public/skilzen_logo.png";
-import rocketMlLogo from "../public/rocketml_logo.png";
-import carScanLogo from "../public/carscan_logo.png";
+import skilzenLogo from "../public/skilzen_logo.jpg";
+import rocketMlLogo from "../public/rocketml_logo.jpg";
+import carScanLogo from "../public/carscan_logo.jpg";
 import chatSurakshaSS from "../public/chat-suraksha-ss.png";
 import kangarooTypeSS from "../public/kangaroo-type-ss.png";
 

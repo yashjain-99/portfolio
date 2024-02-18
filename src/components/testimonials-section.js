@@ -4,16 +4,20 @@ import { useSectionInView } from "../hooks/use-section-in-view";
 import clsx from "clsx";
 import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 import { testimonials } from "../utils/constants";
+import { motion } from "framer-motion";
 
 const TestimonialsSection = () => {
   const { ref } = useSectionInView("testimonials", 0.6);
   const { activeSection } = useActiveSectionContext();
 
   return (
-    <div
+    <motion.div
       className="flex flex-col justify-center items-center mb-4 gap-4"
       id="testimonials"
       ref={ref}
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div
         name="TestimonialsSectionTitle"
@@ -54,7 +58,7 @@ const TestimonialsSection = () => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,16 +2,20 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 import { useSectionInView } from "../hooks/use-section-in-view";
 import { AboutMeLogo } from "../utils/logos";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   const { ref } = useSectionInView("about");
   const { activeSection } = useActiveSectionContext();
   return (
-    <div
+    <motion.div
       name="AboutMeSection"
       className="grid grid-flow-row auto-rows-min gap-2 p-3 m-3 md:max-w-[1024px] md:mt-10 scroll-mt-36"
       id="about"
       ref={ref}
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div
         name="AboutMeTitle"
@@ -38,7 +42,7 @@ const AboutMe = () => {
           et eiusmod sit Lorem aute veniam cillum.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

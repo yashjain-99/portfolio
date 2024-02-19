@@ -7,6 +7,8 @@ import {
 } from "../utils/logos";
 import Card from "./card";
 import ConnectButton from "./connect-button";
+import { motion } from "framer-motion";
+import portfolioPhoto from "../public/portfolio_photo.jpg";
 
 const Hero = () => {
   const { ref } = useSectionInView("home");
@@ -17,15 +19,18 @@ const Hero = () => {
   ];
 
   return (
-    <div
+    <motion.div
       className="grid grid-rows-2 gap-2 p-3 m-3 md:h-80 md:max-w-[1024px] md:grid-cols-3 md:grid-rows-none md:gap-8 md:mt-10 scroll-mt-20"
       id="home"
       ref={ref}
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <Card appliedClassName="flex flex-col p-3 md:col-span-2 md:flex-row md:items-center">
         <div className="min-h-max max-w-max border-white rounded-full m-3 md:m-5 md:min-w-max border">
           <img
-            src="http://placekitten.com/g/200/200"
+            src={portfolioPhoto}
             className="rounded-full aspect-square h-24 w-24 md:h-52 md:w-52"
           />
         </div>
@@ -59,16 +64,48 @@ const Hero = () => {
           </span>
         </Card>
         <div className="flex items-center gap-2 justify-evenly">
-          <Card appliedClassName="p-3">{GithubLogo}</Card>
-          <Card appliedClassName="p-3">{LinkedInLogo}</Card>
-          <Card appliedClassName="p-3">{InstagramLogo}</Card>
-          <Card appliedClassName="p-3">{TwitterLogo}</Card>
+          <Card appliedClassName="p-3 cursor-pointer group">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+            >
+              {GithubLogo}
+            </motion.div>
+          </Card>
+          <Card appliedClassName="p-3 cursor-pointer group">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+            >
+              {LinkedInLogo}
+            </motion.div>
+          </Card>
+          <Card appliedClassName="p-3 cursor-pointer group">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+            >
+              {InstagramLogo}
+            </motion.div>
+          </Card>
+          <Card appliedClassName="p-3 cursor-pointer group">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+            >
+              {TwitterLogo}
+            </motion.div>
+          </Card>
         </div>
         <Card appliedClassName="flex items-center justify-center">
           <ConnectButton />
         </Card>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

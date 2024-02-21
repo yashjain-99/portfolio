@@ -1,9 +1,9 @@
 import { useSectionInView } from "../hooks/use-section-in-view";
 import {
   GithubLogo,
-  InstagramLogo,
+  LeetCodeLogo,
   LinkedInLogo,
-  TwitterLogo,
+  HackerRankLogo,
 } from "../utils/logos";
 import Card from "./card";
 import ConnectButton from "./connect-button";
@@ -58,47 +58,64 @@ const Hero = () => {
       </Card>
       <div className="grid grid-rows-3 min-w-full">
         <Card appliedClassName="flex flex-col">
-          <span className="m-4 text-sm font-light">Based In</span>
+          <span className="ml-4 mt-4 text-xl font-medium text-[#525252]">
+            Title
+          </span>
           <span className="ml-4 text-2xl font-sans font-semibold md:self-center">
-            Jabba
+            Software Engineer
           </span>
         </Card>
         <div className="flex items-center gap-2 justify-evenly">
           <Card appliedClassName="p-3 cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
-            >
-              {GithubLogo}
-            </motion.div>
+            <a href="https://github.com/yashjain-99" target="_blank">
+              <motion.div
+                whileHover={{ scale: 1.1 }} // add fill here in future
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+                className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+              >
+                {GithubLogo}
+              </motion.div>
+            </a>
           </Card>
           <Card appliedClassName="p-3 cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+            <a
+              href="https://www.linkedin.com/in/yash-jain-80ba02196/"
+              target="_blank"
             >
-              {LinkedInLogo}
-            </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+              >
+                {LinkedInLogo}
+              </motion.div>
+            </a>
           </Card>
           <Card appliedClassName="p-3 cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
-            >
-              {InstagramLogo}
-            </motion.div>
+            <a href="https://leetcode.com/Yashj133/" target="_blank">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+              >
+                {LeetCodeLogo}
+              </motion.div>
+            </a>
           </Card>
           <Card appliedClassName="p-3 cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+            <a
+              href="https://www.hackerrank.com/profile/yashj133_yj"
+              target="_blank"
             >
-              {TwitterLogo}
-            </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="fill-white group-hover:fill-primary-icon-selected-color transition-all ease-in-out"
+              >
+                {HackerRankLogo}
+              </motion.div>
+            </a>
           </Card>
         </div>
         <Card appliedClassName="flex items-center justify-center">

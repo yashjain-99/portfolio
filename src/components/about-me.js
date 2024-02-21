@@ -15,7 +15,7 @@ const AboutMe = () => {
       ref={ref}
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.5 }}
     >
       <div
         name="AboutMeTitle"
@@ -30,16 +30,22 @@ const AboutMe = () => {
         </div>
         <span>About Me Section</span>
       </div>
-      <div className=" h-fit p-4 leading-7 text-justify">
+      <div className=" h-fit p-4 leading-7">
         <p>
-          Minim non in duis sunt aliquip sint pariatur dolore est. Duis quis
-          occaecat ullamco proident amet proident magna sit culpa ea occaecat.
-          Sunt Lorem est id nulla duis sit dolore nisi ullamco eiusmod ad aute.
-          Elit Lorem veniam culpa ut et labore aliqua pariatur non. Qui deserunt
-          excepteur ullamco ad culpa non tempor adipisicing pariatur
-          exercitation dolor nulla. Ut exercitation veniam laboris dolore ad
-          officia eu irure enim velit occaecat Lorem veniam nostrud. Veniam nisi
-          et eiusmod sit Lorem aute veniam cillum.
+          Hey there! I'm Yash Jain, a software engineer currently working at RSL
+          as a contractor for LinkedIn. With a knack for full stack development,
+          I've journeyed through diverse industries, honing my skills along the
+          way.
+        </p>
+        <p>
+          My journey started with internships in different fields: from Data
+          Engineering at Skilzen, to Data Science at RocketML, and Computer
+          Vision at CarScan. These experiences taught me to tackle complex
+          problems with clean, efficient code.
+        </p>
+        <p>
+          Let's connect and discuss your next project over a cup of coffee (or
+          virtual coffee—I'm flexible)!
         </p>
       </div>
     </motion.div>

@@ -38,18 +38,41 @@ export const background_section_data = {
   ],
   career: [
     {
-      heading: "Data engineer, Intern",
-      subHeading: "Skilzen",
+      heading: "Software Engineer",
+      subHeading: "Raja Software Labs",
+      description: (
+        <ul className="m-2 leading-relaxed text-white/70 text-ellipsis list-disc">
+          <li>Worked as a LinkedIn contractor.</li>
+          <li>
+            Contributed to the development of the product used by millions of
+            users.
+          </li>
+          <li>
+            Demonstrated strong problem-solving skills, efficiently
+            troubleshooting complex issues and ensuring smooth project progress.
+          </li>
+          <li>Worked with JS, Java, EmberJS, ReactJS.</li>
+        </ul>
+      ),
+      tags: ["Javascript", "Java", "EmberJS", "ReactJS"],
+    },
+    {
+      heading: "Computer vision engineer, Intern",
+      subHeading: "CarScan",
       description: (
         <ul className="m-2 leading-relaxed text-white/70 text-ellipsis list-disc">
           <li>
-            Build systems that collect, manage and convert raw data into usable
-            information.
+            Developed various production-ready complex computer vision models
+            such as real-time instance segmentation of car parts and many more.
           </li>
-          <li>Developed a CLI for scrapping job openings from linkedIn.</li>
+          <li>
+            Worked with various computer vision frameworks and libraries such as
+            Detectron2, YOLOv7, and many more for development of models.
+          </li>
+          <li>Worked with TorchServe and AWS for deploying trained models.</li>
         </ul>
       ),
-      tags: ["Python", "Selenium", "BeautifulSoup", "AWS E3"],
+      tags: ["Python", "PyTorch", "Computer-Vision", "Torch-Serve"],
     },
     {
       heading: "Data scientist, Intern",
@@ -72,8 +95,35 @@ export const background_section_data = {
       ),
       tags: ["Python", "Tensorflow", "Optuna", "CLI"],
     },
+    {
+      heading: "Data engineer, Intern",
+      subHeading: "Skilzen",
+      description: (
+        <ul className="m-2 leading-relaxed text-white/70 text-ellipsis list-disc">
+          <li>
+            Build systems that collect, manage and convert raw data into usable
+            information.
+          </li>
+          <li>Developed a CLI for scrapping job openings from linkedIn.</li>
+        </ul>
+      ),
+      tags: ["Python", "Selenium", "BeautifulSoup", "AWS E3"],
+    },
   ],
-  extra: [],
+  extra: [
+    {
+      heading: "Open Source Contribution",
+      description: "Hacktoberfest 2021",
+    },
+    {
+      heading: "President, Developer's Club",
+      description: "Chandigarh University",
+    },
+    {
+      heading: "Sponsor head, IT society",
+      description: "Birla Institute of Technology",
+    },
+  ],
 };
 
 export const testimonials = [

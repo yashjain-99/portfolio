@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center mb-4 gap-4"
+      className="flex flex-col justify-center items-center mb-4 gap-4 scroll-mt-20"
       id="testimonials"
       ref={ref}
       initial={{ opacity: 0, y: 200 }}

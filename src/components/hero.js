@@ -26,6 +26,7 @@ const Hero = () => {
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.2 }}
     >
       <Card appliedClassName="flex flex-col p-3 md:col-span-2 md:flex-row md:items-center">
         <div className="min-h-max max-w-max border-white rounded-full m-3 md:m-5 md:min-w-max border">

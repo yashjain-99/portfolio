@@ -15,7 +15,7 @@ const BackgroundSection = () => {
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center p-3 m-3"
+      className="flex flex-col justify-center items-center p-3 m-3 scroll-mt-20"
       id="CV"
       ref={ref}
       initial={{ opacity: 0, y: 200 }}

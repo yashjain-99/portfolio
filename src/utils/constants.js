@@ -4,6 +4,7 @@ import rocketMlLogo from "../public/rocketml_logo.jpg";
 import carScanLogo from "../public/carscan_logo.jpg";
 import chatSurakshaSS from "../public/chat-suraksha-ss.png";
 import kangarooTypeSS from "../public/kangaroo-type-ss.png";
+import nextRtcSS from "../public/next-rtc-ss.png";
 
 export const background_section_columns = [
   {
@@ -154,7 +155,7 @@ export const testimonials = [
 ];
 
 export const projects_data = {
-  web: [
+  fullStack: [
     {
       heading: "Chat Suraksha",
       description:
@@ -165,16 +166,36 @@ export const projects_data = {
       ss: chatSurakshaSS,
     },
     {
+      heading: "Next-RTC",
+      description:
+        "Next-RTC is a web application that offers users a platform for seamless peer-to-peer connections. Built with NextJS, it uses Socket.IO to establish the initial connection and WebRTC for peer communication.",
+      tags: ["NextJS", "WebRTC", "socket.io", "tailwind"],
+      github: "https://github.com/yashjain-99/next-rtc",
+      web: "https://next-rtc.onrender.com/",
+      ss: nextRtcSS,
+    },
+  ],
+  frontEnd: [
+    {
       heading: "KangarooType",
       description:
         "Kangaroo-Type is a web application that provides users a platform to test their typing speed and accuracy. It offers an engaging typing experience and generates comprehensive reports showcasing words per minute (WPM), the number of errors, and other valuable typing statistics along with an interactive graph.",
-      tags: ["ReactJS"],
+      tags: ["ReactJS", "scss"],
       github: "https://github.com/yashjain-99/KangarooType",
       web: "https://kangaroo-type.vercel.app/",
       ss: kangarooTypeSS,
     },
   ],
-  cv: [
+  backEnd: [
+    {
+      heading: "Potato-API",
+      description:
+        "Potato-API is a RESTful API that enables users to explore various dishes along with their respective recipes. It also allows administrators to add new dishes and recipes. The API uses token-based authentication and includes functionality for adding images as well.",
+      tags: ["Python", "Django", "DRF", "Docker"],
+      github: "https://github.com/yashjain-99/Potato-API",
+    },
+  ],
+  ml: [
     {
       heading: "Car parts detection",
       description:
@@ -189,8 +210,6 @@ export const projects_data = {
       tags: ["Python", "PyTorch", "YOLOv7", "DeepSORT", "OpenCV"],
       github: "https://github.com/yashjain-99/object_tracking",
     },
-  ],
-  nlp: [
     {
       heading: "Financial News Sentiment Ananlysis using BERT",
       description:
@@ -204,15 +223,19 @@ export const projects_data = {
 
 export const projects_columns = [
   {
-    columnName: "Web",
-    alias: "web",
+    columnName: "Fullstack",
+    alias: "fullStack",
   },
   {
-    columnName: "Computer Vision",
-    alias: "cv",
+    columnName: "Frontend",
+    alias: "frontEnd",
   },
   {
-    columnName: "Natural Language Processing",
-    alias: "nlp",
+    columnName: "Backend",
+    alias: "backEnd",
+  },
+  {
+    columnName: "ML",
+    alias: "ml",
   },
 ];

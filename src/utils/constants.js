@@ -4,6 +4,7 @@ import rocketMlLogo from "../public/rocketml_logo.jpg";
 import carScanLogo from "../public/carscan_logo.jpg";
 import chatSurakshaSS from "../public/chat-suraksha-ss.png";
 import kangarooTypeSS from "../public/kangaroo-type-ss.png";
+import vittaSetuSS from "../public/vitta-setu-ss.png";
 import nextRtcSS from "../public/next-rtc-ss.png";
 
 export const background_section_columns = [
@@ -176,6 +177,15 @@ export const projects_data = {
     },
   ],
   frontEnd: [
+    {
+      heading: "VittaSetu",
+      description:
+        "Vitta-Setu is an account aggregator front-end web application that offers users a seamless platform to manage their financial accounts, track transactions, set budgets, and monitor their financial health. With a modern interface and a focus on user experience, Vitta-Setu ensures that users can easily navigate through their banking needs.",
+      tags: ["NextJS", "TS", "tailwind"],
+      github: "https://github.com/yashjain-99/vitta-setu",
+      web: "https://vitta-setu.vercel.app/",
+      ss: vittaSetuSS,
+    },
     {
       heading: "KangarooType",
       description:

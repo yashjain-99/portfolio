@@ -6,6 +6,7 @@ import chatSurakshaSS from "../public/chat-suraksha-ss.png";
 import kangarooTypeSS from "../public/kangaroo-type-ss.png";
 import vittaSetuSS from "../public/vitta-setu-ss.png";
 import nextRtcSS from "../public/next-rtc-ss.png";
+import appleWatchStudioCloneSS from "../public/apple-watch-studio-clone-ss.png";
 
 export const background_section_columns = [
   {
@@ -194,6 +195,15 @@ export const projects_data = {
       github: "https://github.com/yashjain-99/KangarooType",
       web: "https://kangaroo-type.vercel.app/",
       ss: kangarooTypeSS,
+    },
+    {
+      heading: "Apple Watch Studio Clone",
+      description:
+        "Apple Watch Studio Clone is a web application that allows users to customize their Apple Watch. Inspired by the official Apple Watch Studio website, this app enables you to choose your watch case, collection, size, and band while offering a real-time preview of your design and the associated cost.",
+      tags: ["NextJS", "ReactJS", "tailwindCSS", "framer motion"],
+      github: "https://github.com/yashjain-99/apple-watch-studio-clone/",
+      web: "https://apple-watch-studio-clone.vercel.app/",
+      ss: appleWatchStudioCloneSS,
     },
   ],
   backEnd: [

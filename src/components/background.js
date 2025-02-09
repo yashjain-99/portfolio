@@ -38,8 +38,8 @@ const BackgroundSection = () => {
       <CardLayoutWindow
         columns={background_section_columns}
         data={background_section_data}
-        sectionClassName="flex flex-col gap-4 flex-wrap justify-center w-full items-center m-4"
-        cardItemClassName="max-w-md"
+        sectionClassName="flex flex-col gap-4 flex-wrap justify-center w-full items-center p-4"
+        cardItemClassName="max-w-md min-w-full"
       />
     </motion.div>
   );

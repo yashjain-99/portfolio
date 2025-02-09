@@ -41,20 +41,26 @@ export const background_section_data = {
   ],
   career: [
     {
-      heading: "Software Engineer",
+      heading: "Software Engineer, LinkedIn Contractual SE",
       subHeading: "Raja Software Labs",
       description: (
         <ul className="m-2 leading-relaxed text-white/70 text-ellipsis list-disc">
-          <li>Worked as a LinkedIn contractor.</li>
           <li>
-            Contributed to the development of the product used by millions of
-            users.
+            Improved user experience for a widely-used product, leveraging
+            JavaScript, React.js, and Ember.js expertise.
           </li>
           <li>
-            Demonstrated strong problem-solving skills, efficiently
-            troubleshooting complex issues and ensuring smooth project progress.
+            Enhanced API efficiency and data retrieval precision through
+            migration from REST to GraphQL.
           </li>
-          <li>Worked with JS, Java, EmberJS, ReactJS.</li>
+          <li>
+            Developed internal tools using React.js to manage and track user
+            activity, increasing operational efficiency by 40%.
+          </li>
+          <li>
+            Created automated tools to streamline and optimize internal
+            workflows, which reduced the manual effort.
+          </li>
         </ul>
       ),
       tags: ["Javascript", "Java", "EmberJS", "ReactJS"],
